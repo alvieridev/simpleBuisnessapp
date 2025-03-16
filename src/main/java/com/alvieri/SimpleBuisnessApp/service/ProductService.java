@@ -30,5 +30,15 @@ public class ProductService {
         return products;
     }
 
+    public void updateProduct(Product prod) {
+        int index = 0;
+        for (int i = 0; i < products.size(); i++){
+            if(products.get(i).getProdID() == prod.getProdID()){
+                index = i;
+            }
+        }
+        System.out.println("INDEX FOUND: " + index);
+        products.set(index, prod);
+    }
 }
 
