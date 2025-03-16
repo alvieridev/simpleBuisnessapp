@@ -40,5 +40,15 @@ public class ProductService {
         System.out.println("INDEX FOUND: " + index);
         products.set(index, prod);
     }
+
+    public void deleteProd(int prodId) {
+        int index = 0;
+        for (int i = 0; i < products.size(); i++){
+            if(products.get(i).getProdID() == prodId){
+                index = i;
+            }
+        }
+        products.remove(index);
+    }
 }
 

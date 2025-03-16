@@ -35,4 +35,10 @@ public class ProductController {
         System.out.println("Here");
         productService.updateProduct(prod);
     }
+    @DeleteMapping("/products/{prodId}")
+    public void updateProduct(@PathVariable int  prodId){
+        System.out.println("Here");
+        productService.deleteProd(prodId);
+    }
+
 }
